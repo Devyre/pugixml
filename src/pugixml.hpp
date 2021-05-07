@@ -268,6 +268,9 @@ namespace pugi
 	// Use single quotes ' instead of double quotes " for enclosing attribute values. This flag is off by default.
 	const unsigned int format_attribute_single_quote = 0x200;
 
+	// Don't output empty element tags, instead writing an explicit start and end tag even if there are no children. This flag is off by default.
+	const unsigned int format_disable_inline_closing_tag = 0x400;
+
 	// The default set of formatting flags.
 	// Nodes are indented depending on their depth in DOM tree, a default declaration is output if document has none.
 	const unsigned int format_default = format_indent;
