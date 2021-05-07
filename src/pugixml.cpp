@@ -4127,8 +4127,11 @@ PUGI__NS_BEGIN
 				{
 					if ((flags & format_raw) == 0)
 						writer.write(' ');
-
-					writer.write('/', '>');
+					
+					if (flags & format_disable_inline_closing_tag)
+						writer.write('>');
+					else
+						writer.write('/', '>');
 
 					return false;
 				}
